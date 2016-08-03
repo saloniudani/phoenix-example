@@ -6,22 +6,22 @@ Example that demonstrates how to connect to a local HBase instance through Phoen
  - tar xzvf hbase-1.1.5-bin.tar.gz
 3. cd hbase-1.1.5-bin
 4. Edit conf/hbase-site.xml
-```XML  
-<configuration>
-    <property>
-      <name>hbase.rootdir</name>
-      <value>file://$HOME/hbase-1.1.5/data/hbase/</value>
-    </property>
-    <property>
-      <name>hbase.zookeeper.property.dataDir</name>
-      <value>$HOME/hbase-1.1.5/data/zookeeper</value>
-    </property>
-    <property>
-         <name>hbase.regionserver.wal.codec</name>
-         <value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
-         <description>Factory to create the Phoenix RPC Scheduler that knows to put index updates into index queues</description>
+ ```XML  
+ <configuration>
+     <property>
+       <name>hbase.rootdir</name>
+       <value>file://$HOME/hbase-1.1.5/data/hbase/</value>
      </property>
-  </configuration>
+     <property>
+       <name>hbase.zookeeper.property.dataDir</name>
+       <value>$HOME/hbase-1.1.5/data/zookeeper</value>
+     </property>
+     <property>
+          <name>hbase.regionserver.wal.codec</name>
+          <value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
+          <description>Factory to create the Phoenix RPC Scheduler that knows to put index updates into index queues</description>
+      </property>
+   </configuration>
  ```
 5. Make data directory.
  - mkdir data
